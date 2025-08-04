@@ -23,6 +23,7 @@ public class SwerveSubsystem extends SubsystemBase {
 
   public SwerveSubsystem() {
     File directory = new File(Filesystem.getDeployDirectory(), "swerve");
+    SwerveDriveTelemetry.verbosity = TelemetryVerbosity.HIGH;
     try {
       swerveDrive = new SwerveParser(directory)
           .createSwerveDrive(
